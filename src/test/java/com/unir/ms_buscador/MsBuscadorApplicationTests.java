@@ -1,10 +1,10 @@
-package com.company.microservice;
+package com.unir.ms_buscador;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MicroserviceApplicationTests {
+class MsBuscadorApplicationTests {
 
 	@Test
 	void contextLoads() {
