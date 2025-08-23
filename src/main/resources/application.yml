@@ -7,23 +7,18 @@ eureka:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true # For local development. Set to false if you want to use the hostname in a DNS-enabled environment
-    hostname: ${HOSTNAME:localhost}
-    appname: ${APP_NAME:ms-buscador}
+    hostname: ${HOSTNAME:ms-operador}
 
 ## Configuration for App name and Spring Data
 spring:
   application:
-    name: ${APP_NAME:ms-buscador}
+    name: ${APP_NAME:ms-operador}
   datasource:
     url: jdbc:h2:mem:testdb
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: none
-  sql:
-    init:
-      mode: always
-      encoding: UTF-8
+      ddl-auto: create-drop
   h2:
     console:
       enabled: true
@@ -33,5 +28,8 @@ spring:
 
 ## Instance port
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8081}
 
+## MS-BUSCADOR
+getMovie:
+  url: http://MS-BUSCADOR/movies/%s

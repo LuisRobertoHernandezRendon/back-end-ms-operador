@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.unir</groupId>
-	<artifactId>ms-buscador</artifactId> <!-- If you change this artifactId, change it too in Dockerfile -->
+	<artifactId>ms-operador</artifactId> <!-- If you change this artifactId, change it too in Dockerfile -->
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ms-buscador</name>
+	<name>ms-operador</name>
 	<description>Straightforward archetype of Spring Microservice with Java. </description>
 	<properties>
 		<java.version>21</java.version>

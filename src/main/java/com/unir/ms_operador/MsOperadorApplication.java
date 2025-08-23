@@ -1,14 +1,24 @@
-package com.unir.ms_buscador;
+package com.unir.ms_operador;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @Slf4j
-public class MsBuscadorApplication {
+public class MsOperadorApplication {
+
+	@LoadBalanced
+	@Bean
+	public RestTemplate restTemplate(){
+		return new RestTemplate();
+	}
 
 	public static void main(String[] args) {
+
 		// Retrieve execution profile from environment variable. If not present, default profile is selected.
 		String profile = System.getenv("PROFILE");
 		System.setProperty("spring.profiles.active", profile != null ? profile : "default");
@@ -19,6 +29,6 @@ public class MsBuscadorApplication {
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 		}
-		SpringApplication.run(MsBuscadorApplication.class, args);
+		SpringApplication.run(MsOperadorApplication.class, args);
 	}
 }
