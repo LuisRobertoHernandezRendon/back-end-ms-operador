@@ -8,6 +8,7 @@ eureka:
   instance:
     preferIpAddress: true # For local development. Set to false if you want to use the hostname in a DNS-enabled environment
     hostname: ${HOSTNAME:localhost}
+    appname: ${APP_NAME:ms-buscador}
 
 ## Configuration for App name and Spring Data
 spring:
