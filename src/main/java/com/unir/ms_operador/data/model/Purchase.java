@@ -30,7 +30,7 @@ public class Purchase {
   private Long purchaseId;  // identificador único de la renta
 
   @Column(name = "movie_id", nullable = false)
-  private Long movieId;  // Id de la película (referencia al MS de movies)
+  private String movieId;  // Id de la película (referencia al MS de movies)
 
   @Column(name = "user_id", nullable = false)
   private Long userId;

@@ -34,7 +34,7 @@ public class RentalServiceImpl implements RentalService {
 
   @Override
   public Rental createRental(CreateRentalRequest request){
-    if (request != null && request.getUserId() != null && request.getMovieId() != null && request.getPriceRental() != null) {
+    if (request != null && request.getUserId() != null && request.getMovieId() != null) {
 
       // buscamos la pelicula 
       Movie movie = moviesFacade.getMovie(request.getMovieId());
@@ -50,7 +50,7 @@ public class RentalServiceImpl implements RentalService {
       Rental rental = Rental.builder()
         .userId(request.getUserId())
         .movieId(request.getMovieId())
-        .priceRental(request.getPriceRental())
+        .priceRental(movie.getPriceRental())
         .rentedAt(rentalDate)
         .returnAt(returnDate)
         .build();

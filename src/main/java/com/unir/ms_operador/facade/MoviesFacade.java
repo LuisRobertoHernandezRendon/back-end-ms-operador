@@ -20,7 +20,7 @@ public class MoviesFacade {
 
   private final RestTemplate restTemplate;
 
-  public Movie getMovie(Long movieId) {
+  public Movie getMovie(String movieId) {
     try {
       return restTemplate.getForObject(String.format(getMovieUrl, movieId), Movie.class);
     } catch (HttpClientErrorException e) {

@@ -11,9 +11,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CreatePurchaseRequest {
 
-  private Long movieId;
+  private String movieId;
   private Long userId;
-  private Double pricePurchase;
 
 }
 

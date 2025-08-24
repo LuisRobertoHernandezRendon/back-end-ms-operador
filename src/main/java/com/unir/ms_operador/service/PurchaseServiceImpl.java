@@ -34,7 +34,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 
   @Override
   public Purchase createPurchase(CreatePurchaseRequest request){
-    if (request != null && request.getUserId() != null && request.getMovieId() != null && request.getPricePurchase() != null) {
+    if (request != null && request.getUserId() != null && request.getMovieId() != null) {
       // buscamos la pelicula 
       Movie movie = moviesFacade.getMovie(request.getMovieId());
 
@@ -48,7 +48,7 @@ public class PurchaseServiceImpl implements PurchaseService {
       Purchase purchase = Purchase.builder()
         .userId(request.getUserId())
         .movieId(request.getMovieId())
-        .pricePurchase(request.getPricePurchase())
+        .pricePurchase(movie.getPricePurchase())
         .purchaseAt(purchaseDate)
         .build();
 

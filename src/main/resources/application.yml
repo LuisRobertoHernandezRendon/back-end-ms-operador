@@ -32,4 +32,5 @@ server:
 
 ## MS-BUSCADOR
 getMovie:
-  url: http://MS-BUSCADOR/movies/%s
+  # url: http://MS-BUSCADOR/movies/%s
+  url: http://MS-BUSCADOR/elastic/movies/%s

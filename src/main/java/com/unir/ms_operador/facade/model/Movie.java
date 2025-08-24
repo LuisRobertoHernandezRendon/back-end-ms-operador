@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Builder
 public class Movie {
-  private Long movieId;
+  private String movieId;
 	private String title;
   private String director;
   private Integer release_year;
